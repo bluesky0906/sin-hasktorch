@@ -1,0 +1,31 @@
+resolver: lts-18.14
+#compiler: ghc-8.10.7
+
+# User packages to be built.
+# Various formats can be used as shown in the example below.
+#
+# packages:
+# - some-directory
+# - https://example.com/foo/bar/baz-0.0.2.tar.gz
+#   subdirs:
+#   - auto-update
+
+extra-include-dirs:
+  - /home/acc12242uy/.local/lib/hasktorch/deps/pytorch/torch/include
+  - /home/acc12242uy/.local/lib/hasktorch/deps/pytorch/torch/csrc/api/include
+  - /home/acc12242uy/.pyenv/versions/miniconda-3.9.1/envs/pytorch/include
+
+
+extra-lib-dirs:
+  - /home/acc12242uy/.local/lib/hasktorch/deps/pytorch/torch/lib
+  - /home/acc12242uy/.pyenv/versions/miniconda-3.9.1/envs/pytorch/lib
+
+extra-deps:
+  - git: https://github.com/DaisukeBekki/nlp-tools.git
+    commit: 0b6912850dbffd14ed16c3fa26a0773c877ba093
+  - /home/acc12242uy/.local/lib/hasktorch/codegen
+  - /home/acc12242uy/.local/lib/hasktorch/libtorch-ffi
+  - /home/acc12242uy/.local/lib/hasktorch/libtorch-ffi-helper
+  - /home/acc12242uy/.local/lib/hasktorch/hasktorch
+  - /home/acc12242uy/.local/lib/hasktorch-tools
+  - json-stream-0.4.2.4
