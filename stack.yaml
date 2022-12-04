@@ -1,24 +1,14 @@
-resolver: lts-18.14
-#compiler: ghc-8.10.7
-
-# User packages to be built.
-# Various formats can be used as shown in the example below.
-#
-# packages:
-# - some-directory
-# - https://example.com/foo/bar/baz-0.0.2.tar.gz
-#   subdirs:
-#   - auto-update
+resolver: nightly-2022-10-11
 
 extra-include-dirs:
-  - /home/acc12242uy/.local/lib/hasktorch/deps/pytorch/torch/include
-  - /home/acc12242uy/.local/lib/hasktorch/deps/pytorch/torch/csrc/api/include
-  - /home/acc12242uy/.pyenv/versions/miniconda-3.9.1/envs/pytorch/include
-
+  - ../../.pyenv/versions/miniconda-3.9.1/envs/pytorch/include
+  - ../../.local/lib/hasktorch/deps/libtorch/include/torch/csrc/api/include
+  - ../../.local/lib/hasktorch/deps/libtorch/include
 
 extra-lib-dirs:
-  - /home/acc12242uy/.local/lib/hasktorch/deps/pytorch/torch/lib
-  - /home/acc12242uy/.pyenv/versions/miniconda-3.9.1/envs/pytorch/lib
+  - ../../.local/lib/hasktorch/deps/libtorch/lib
+  - ../../.pyenv/versions/miniconda-3.9.1/envs/pytorch/lib
+  - ../../.local/lib/hasktorch/deps/libtokenizers/lib
 
 extra-deps:
   - git: https://github.com/DaisukeBekki/nlp-tools.git
@@ -28,4 +18,13 @@ extra-deps:
   - /home/acc12242uy/.local/lib/hasktorch/libtorch-ffi-helper
   - /home/acc12242uy/.local/lib/hasktorch/hasktorch
   - /home/acc12242uy/.local/lib/hasktorch-tools
-  - json-stream-0.4.2.4
+  - git: https://github.com/fpco/inline-c
+    commit: 2d0fe9b2f0aa0e1aefc7bfed95a501e59486afb0
+    subdirs:
+    - inline-c
+  - git: https://github.com/fpco/inline-c
+    commit: 2d0fe9b2f0aa0e1aefc7bfed95a501e59486afb0
+    subdirs:
+    - inline-c-cpp
+
+allow-newer: true

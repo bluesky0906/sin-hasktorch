@@ -65,7 +65,7 @@ executables:
     dependencies:
     - sin-hasktorch
 
-  inRNN:
+  SinRNN:
     main:                SinRNN.hs
     other-modules:       []
     source-dirs:         app/UnTyped
